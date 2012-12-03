@@ -17,12 +17,13 @@
 		BE03B1C7166C74C400124A29 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE03B1C6166C74C400124A29 /* Default@2x.png */; };
 		BE03B1C9166C74C400124A29 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE03B1C8166C74C400124A29 /* Default-568h@2x.png */; };
 		BE03B1CC166C74C400124A29 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE03B1CA166C74C400124A29 /* MainStoryboard.storyboard */; };
-		BE03B1CF166C74C400124A29 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03B1CE166C74C400124A29 /* FirstViewController.m */; };
+		BE03B1CF166C74C400124A29 /* CurrentLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03B1CE166C74C400124A29 /* CurrentLocationViewController.m */; };
 		BE03B1D1166C74C400124A29 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = BE03B1D0166C74C400124A29 /* first.png */; };
 		BE03B1D3166C74C400124A29 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE03B1D2166C74C400124A29 /* first@2x.png */; };
 		BE03B1D6166C74C400124A29 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03B1D5166C74C400124A29 /* SecondViewController.m */; };
 		BE03B1D8166C74C400124A29 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = BE03B1D7166C74C400124A29 /* second.png */; };
 		BE03B1DA166C74C400124A29 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE03B1D9166C74C400124A29 /* second@2x.png */; };
+		BE03B1E1166C838F00124A29 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE03B1E0166C838F00124A29 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,14 +41,15 @@
 		BE03B1C6166C74C400124A29 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BE03B1C8166C74C400124A29 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BE03B1CB166C74C400124A29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		BE03B1CD166C74C400124A29 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		BE03B1CE166C74C400124A29 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		BE03B1CD166C74C400124A29 /* CurrentLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentLocationViewController.h; sourceTree = "<group>"; };
+		BE03B1CE166C74C400124A29 /* CurrentLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationViewController.m; sourceTree = "<group>"; };
 		BE03B1D0166C74C400124A29 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		BE03B1D2166C74C400124A29 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		BE03B1D4166C74C400124A29 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		BE03B1D5166C74C400124A29 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		BE03B1D7166C74C400124A29 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		BE03B1D9166C74C400124A29 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		BE03B1E0166C838F00124A29 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE03B1E1166C838F00124A29 /* CoreLocation.framework in Frameworks */,
 				BE03B1B3166C74C300124A29 /* UIKit.framework in Frameworks */,
 				BE03B1B5166C74C300124A29 /* Foundation.framework in Frameworks */,
 				BE03B1B7166C74C300124A29 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +70,7 @@
 		BE03B1A3166C74C300124A29 = {
 			isa = PBXGroup;
 			children = (
+				BE03B1E0166C838F00124A29 /* CoreLocation.framework */,
 				BE03B1B8166C74C300124A29 /* Locations */,
 				BE03B1B1166C74C300124A29 /* Frameworks */,
 				BE03B1AF166C74C300124A29 /* Products */,
@@ -97,8 +101,8 @@
 				BE03B1C1166C74C400124A29 /* AppDelegate.h */,
 				BE03B1C2166C74C400124A29 /* AppDelegate.m */,
 				BE03B1CA166C74C400124A29 /* MainStoryboard.storyboard */,
-				BE03B1CD166C74C400124A29 /* FirstViewController.h */,
-				BE03B1CE166C74C400124A29 /* FirstViewController.m */,
+				BE03B1CD166C74C400124A29 /* CurrentLocationViewController.h */,
+				BE03B1CE166C74C400124A29 /* CurrentLocationViewController.m */,
 				BE03B1D0166C74C400124A29 /* first.png */,
 				BE03B1D2166C74C400124A29 /* first@2x.png */,
 				BE03B1D4166C74C400124A29 /* SecondViewController.h */,
@@ -196,7 +200,7 @@
 			files = (
 				BE03B1BF166C74C300124A29 /* main.m in Sources */,
 				BE03B1C3166C74C400124A29 /* AppDelegate.m in Sources */,
-				BE03B1CF166C74C400124A29 /* FirstViewController.m in Sources */,
+				BE03B1CF166C74C400124A29 /* CurrentLocationViewController.m in Sources */,
 				BE03B1D6166C74C400124A29 /* SecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
