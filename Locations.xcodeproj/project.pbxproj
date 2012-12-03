@@ -24,6 +24,8 @@
 		BE03B1D8166C74C400124A29 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = BE03B1D7166C74C400124A29 /* second.png */; };
 		BE03B1DA166C74C400124A29 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE03B1D9166C74C400124A29 /* second@2x.png */; };
 		BE03B1E1166C838F00124A29 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE03B1E0166C838F00124A29 /* CoreLocation.framework */; };
+		BE03B1E8166CBF0700124A29 /* LocationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03B1E7166CBF0700124A29 /* LocationDetailsViewController.m */; };
+		BE03B1EF166CD71900124A29 /* CategoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03B1EE166CD71900124A29 /* CategoryPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,10 @@
 		BE03B1D7166C74C400124A29 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		BE03B1D9166C74C400124A29 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		BE03B1E0166C838F00124A29 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BE03B1E6166CBF0700124A29 /* LocationDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDetailsViewController.h; sourceTree = "<group>"; };
+		BE03B1E7166CBF0700124A29 /* LocationDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailsViewController.m; sourceTree = "<group>"; };
+		BE03B1ED166CD71900124A29 /* CategoryPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryPickerViewController.h; sourceTree = "<group>"; };
+		BE03B1EE166CD71900124A29 /* CategoryPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryPickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +109,16 @@
 				BE03B1CA166C74C400124A29 /* MainStoryboard.storyboard */,
 				BE03B1CD166C74C400124A29 /* CurrentLocationViewController.h */,
 				BE03B1CE166C74C400124A29 /* CurrentLocationViewController.m */,
+				BE03B1E6166CBF0700124A29 /* LocationDetailsViewController.h */,
+				BE03B1E7166CBF0700124A29 /* LocationDetailsViewController.m */,
 				BE03B1D0166C74C400124A29 /* first.png */,
 				BE03B1D2166C74C400124A29 /* first@2x.png */,
 				BE03B1D4166C74C400124A29 /* SecondViewController.h */,
 				BE03B1D5166C74C400124A29 /* SecondViewController.m */,
 				BE03B1D7166C74C400124A29 /* second.png */,
 				BE03B1D9166C74C400124A29 /* second@2x.png */,
+				BE03B1ED166CD71900124A29 /* CategoryPickerViewController.h */,
+				BE03B1EE166CD71900124A29 /* CategoryPickerViewController.m */,
 				BE03B1B9166C74C300124A29 /* Supporting Files */,
 			);
 			path = Locations;
@@ -202,6 +212,8 @@
 				BE03B1C3166C74C400124A29 /* AppDelegate.m in Sources */,
 				BE03B1CF166C74C400124A29 /* CurrentLocationViewController.m in Sources */,
 				BE03B1D6166C74C400124A29 /* SecondViewController.m in Sources */,
+				BE03B1E8166CBF0700124A29 /* LocationDetailsViewController.m in Sources */,
+				BE03B1EF166CD71900124A29 /* CategoryPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

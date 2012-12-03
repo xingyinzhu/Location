@@ -6,8 +6,6 @@
 //  Copyright (c) 2012年 Xingyin Zhu. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
 
 @interface CurrentLocationViewController : UIViewController<CLLocationManagerDelegate>
 

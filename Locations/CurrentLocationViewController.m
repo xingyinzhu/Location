@@ -7,6 +7,7 @@
 //
 
 #import "CurrentLocationViewController.h"
+#import "LocationDetailsViewController.h"
 
 @interface CurrentLocationViewController ()
 
@@ -23,6 +24,17 @@
     CLPlacemark *placemark;
     BOOL performingReverseGeocoding;
     NSError *lastGeocodingError;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"TagLocation"])
+    {
+        UINavigationController *navigationController = segue.destinationViewController;
+        LocationDetailsViewController *controller = (LocationDetailsViewController *)navigationController.topViewController;
+        controller.coordinate = location.coordinate;
+        controller.placemark = placemark;
+    }
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -214,7 +226,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    NSLog(@"didUpdateToLocation %@", newLocation);
+    //NSLog(@"didUpdateToLocation %@", newLocation);
     
     if ([newLocation.timestamp timeIntervalSinceNow] < -5.0)
     {
@@ -277,8 +289,6 @@
             
         }
         
-        
-                
     }
     else if (distance < 1.0)
     {
@@ -292,6 +302,7 @@
         }
     }
 }
+
 
 
 @end
