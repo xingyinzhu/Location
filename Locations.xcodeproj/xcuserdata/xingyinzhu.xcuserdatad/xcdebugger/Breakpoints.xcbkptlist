@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Locations/LocationDetailsViewController.m"
-         timestampString = "376304076.19162"
+         timestampString = "376319829.916469"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "218"
-         endingLineNumber = "218"
+         startingLineNumber = "247"
+         endingLineNumber = "247"
          landmarkName = "-prepareForSegue:sender:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Locations/AppDelegate.m"
-         timestampString = "376304076.19162"
+         timestampString = "376318008.431844"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "94"
-         endingLineNumber = "94"
+         startingLineNumber = "99"
+         endingLineNumber = "99"
          landmarkName = "-managedObjectModel"
          landmarkType = "5">
       </FileBreakpoint>

@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CurrentLocationViewController.h"
-
+#import "LocationsViewController.h"
 
 @interface AppDelegate ()
 
@@ -27,10 +27,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    
     UINavigationController *navigationController = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:0];
     CurrentLocationViewController *currentLocationViewController = (CurrentLocationViewController *)[[navigationController viewControllers] objectAtIndex:0];
-    
     currentLocationViewController.managedObjectContext = self.managedObjectContext;
+    
+    
+    navigationController = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:1];
+    LocationsViewController *locationsViewController = (LocationsViewController *)[[navigationController viewControllers] objectAtIndex:0];
+    locationsViewController.managedObjectContext = self.managedObjectContext;
     
     return YES;
 }
@@ -104,7 +109,7 @@
 
 - (NSString *)dataStorePath
 {
-    //NSLog(@"%@",[[self documentsDirectory] stringByAppendingPathComponent:@"DataStore.sqlite"]);
+    NSLog(@"%@",[[self documentsDirectory] stringByAppendingPathComponent:@"DataStore.sqlite"]);
     return [[self documentsDirectory] stringByAppendingPathComponent:@"DataStore.sqlite"];
 }
 

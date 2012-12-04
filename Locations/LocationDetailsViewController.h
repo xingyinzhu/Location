@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CategoryPickerViewController.h"
 
+@class Location;
+
 @interface LocationDetailsViewController : UITableViewController<UITextViewDelegate, CategoryPickerViewControllerDelegate>
 
 
@@ -26,5 +28,7 @@
 - (IBAction)cancel:(id)sender;
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
+@property (nonatomic, strong) Location *locationToEdit;
 
 @end
