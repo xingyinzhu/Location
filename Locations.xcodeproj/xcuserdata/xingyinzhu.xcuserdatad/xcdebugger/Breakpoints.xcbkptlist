@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Locations/LocationDetailsViewController.m"
-         timestampString = "376235621.348351"
+         timestampString = "376304076.19162"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "203"
-         endingLineNumber = "203"
+         startingLineNumber = "218"
+         endingLineNumber = "218"
          landmarkName = "-prepareForSegue:sender:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -27,6 +27,19 @@
          startingLineNumber = "23"
          endingLineNumber = "23"
          landmarkName = "+hudInView:animated:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Locations/AppDelegate.m"
+         timestampString = "376304076.19162"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "94"
+         endingLineNumber = "94"
+         landmarkName = "-managedObjectModel"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -71,6 +71,9 @@
 		BE03B24F166CE37B00124A29 /* List.psd in Resources */ = {isa = PBXBuildFile; fileRef = BE03B222166CE37B00124A29 /* List.psd */; };
 		BE03B250166CE37B00124A29 /* Pin.psd in Resources */ = {isa = PBXBuildFile; fileRef = BE03B223166CE37B00124A29 /* Pin.psd */; };
 		BE03B251166CE37B00124A29 /* Sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = BE03B225166CE37B00124A29 /* Sound.caf */; };
+		BE12ED8F166DD7460054852A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE12ED8E166DD7460054852A /* CoreData.framework */; };
+		BE12ED9A166DD7DE0054852A /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE12ED98166DD7DE0054852A /* DataModel.xcdatamodeld */; };
+		BE12ED9D166DDA350054852A /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = BE12ED9C166DDA350054852A /* Location.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +150,10 @@
 		BE03B222166CE37B00124A29 /* List.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = List.psd; sourceTree = "<group>"; };
 		BE03B223166CE37B00124A29 /* Pin.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pin.psd; sourceTree = "<group>"; };
 		BE03B225166CE37B00124A29 /* Sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sound.caf; sourceTree = "<group>"; };
+		BE12ED8E166DD7460054852A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BE12ED99166DD7DE0054852A /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		BE12ED9B166DDA350054852A /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = ../Location.h; sourceTree = "<group>"; };
+		BE12ED9C166DDA350054852A /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = ../Location.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE12ED8F166DD7460054852A /* CoreData.framework in Frameworks */,
 				BE03B1E1166C838F00124A29 /* CoreLocation.framework in Frameworks */,
 				BE03B1B3166C74C300124A29 /* UIKit.framework in Frameworks */,
 				BE03B1B5166C74C300124A29 /* Foundation.framework in Frameworks */,
@@ -168,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				BE03B1F3166CE37A00124A29 /* Resources */,
-				BE03B1E0166C838F00124A29 /* CoreLocation.framework */,
 				BE03B1B8166C74C300124A29 /* Locations */,
 				BE03B1B1166C74C300124A29 /* Frameworks */,
 				BE03B1AF166C74C300124A29 /* Products */,
@@ -186,6 +193,8 @@
 		BE03B1B1166C74C300124A29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE12ED8E166DD7460054852A /* CoreData.framework */,
+				BE03B1E0166C838F00124A29 /* CoreLocation.framework */,
 				BE03B1B2166C74C300124A29 /* UIKit.framework */,
 				BE03B1B4166C74C300124A29 /* Foundation.framework */,
 				BE03B1B6166C74C300124A29 /* CoreGraphics.framework */,
@@ -196,6 +205,9 @@
 		BE03B1B8166C74C300124A29 /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				BE12ED98166DD7DE0054852A /* DataModel.xcdatamodeld */,
+				BE12ED9B166DDA350054852A /* Location.h */,
+				BE12ED9C166DDA350054852A /* Location.m */,
 				BE03B1C1166C74C400124A29 /* AppDelegate.h */,
 				BE03B1C2166C74C400124A29 /* AppDelegate.m */,
 				BE03B1CA166C74C400124A29 /* MainStoryboard.storyboard */,
@@ -452,6 +464,8 @@
 				BE03B1E8166CBF0700124A29 /* LocationDetailsViewController.m in Sources */,
 				BE03B1EF166CD71900124A29 /* CategoryPickerViewController.m in Sources */,
 				BE03B1F2166CE1BA00124A29 /* HudView.m in Sources */,
+				BE12ED9A166DD7DE0054852A /* DataModel.xcdatamodeld in Sources */,
+				BE12ED9D166DDA350054852A /* Location.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,8 +582,23 @@
 				BE03B1DF166C74C400124A29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BE12ED98166DD7DE0054852A /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BE12ED99166DD7DE0054852A /* DataModel.xcdatamodel */,
+			);
+			currentVersion = BE12ED99166DD7DE0054852A /* DataModel.xcdatamodel */;
+			name = DataModel.xcdatamodeld;
+			path = ../DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BE03B1A5166C74C300124A29 /* Project object */;
 }

@@ -25,4 +25,6 @@
 - (IBAction)done:(id)sender;
 - (IBAction)cancel:(id)sender;
 
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
 @end

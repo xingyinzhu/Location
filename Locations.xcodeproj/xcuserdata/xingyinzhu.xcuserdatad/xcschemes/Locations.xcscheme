@@ -57,6 +57,12 @@
             ReferencedContainer = "container:Locations.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "&#65532;&#65532;&#65532;&#65532;-com.apple.CoreData.SQLDebug 1"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

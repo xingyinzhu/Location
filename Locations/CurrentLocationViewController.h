@@ -21,4 +21,6 @@
 
 - (IBAction)getLocation:(id)sender;
 
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
 @end
