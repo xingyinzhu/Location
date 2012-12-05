@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Locations/LocationDetailsViewController.m"
-         timestampString = "376401417.198891"
+         timestampString = "376405652.39692"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "345"
-         endingLineNumber = "345"
+         startingLineNumber = "382"
+         endingLineNumber = "382"
          landmarkName = "@implementation LocationDetailsViewController"
          landmarkType = "3">
       </FileBreakpoint>
@@ -59,14 +59,14 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Locations/LocationDetailsViewController.m"
-         timestampString = "376401417.198891"
+         filePath = "Locations/CurrentLocationViewController.h"
+         timestampString = "376405840.084303"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "206"
-         endingLineNumber = "206"
-         landmarkName = "-done:"
-         landmarkType = "5">
+         startingLineNumber = "26"
+         endingLineNumber = "26"
+         landmarkName = "@interface CurrentLocationViewController"
+         landmarkType = "2">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

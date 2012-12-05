@@ -78,6 +78,7 @@
 		BE12EDB3166E29BA0054852A /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE12EDB2166E29BA0054852A /* LocationCell.m */; };
 		BE2017BF166F2112002FF32A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2017BE166F2112002FF32A /* MapKit.framework */; };
 		BE2017C3166F21D5002FF32A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2017C2166F21D5002FF32A /* MapViewController.m */; };
+		BE2017E2166F8099002FF32A /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2017E1166F8099002FF32A /* UIImage+Resize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -165,6 +166,8 @@
 		BE2017BE166F2112002FF32A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BE2017C1166F21D5002FF32A /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		BE2017C2166F21D5002FF32A /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		BE2017E0166F8099002FF32A /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		BE2017E1166F8099002FF32A /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				BE12ED98166DD7DE0054852A /* DataModel.xcdatamodeld */,
+				BE2017E0166F8099002FF32A /* UIImage+Resize.h */,
+				BE2017E1166F8099002FF32A /* UIImage+Resize.m */,
 				BE12ED9B166DDA350054852A /* Location.h */,
 				BE12ED9C166DDA350054852A /* Location.m */,
 				BE03B1C1166C74C400124A29 /* AppDelegate.h */,
@@ -488,6 +493,7 @@
 				BE12EDA0166E23D90054852A /* LocationsViewController.m in Sources */,
 				BE12EDB3166E29BA0054852A /* LocationCell.m in Sources */,
 				BE2017C3166F21D5002FF32A /* MapViewController.m in Sources */,
+				BE2017E2166F8099002FF32A /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@
 @implementation LocationCell
 
 @synthesize descriptionLabel, addressLabel;
+@synthesize imageView;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

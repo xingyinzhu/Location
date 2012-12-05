@@ -113,8 +113,20 @@
     if (self.locationToEdit != nil)
     {
         self.title = @"Edit Location";
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self
-                                                                                               action:@selector(done:)];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+                                                  initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                  target:self
+                                                  action:@selector(done:)];
+        if ([self.locationToEdit hasPhoto] && image == nil)
+        {
+            UIImage *existingImage = [self.locationToEdit photoImage];
+            if (existingImage != nil)
+            {
+                [self showImage:existingImage];
+            }
+        }
+        
+        
     }
     
     if (image != nil)
@@ -201,6 +213,8 @@
     {
         hudView.text = @"Tagged";
         location = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
+        //location.photoId = [NSNumber numberWithInt:-1];
+        location.photoId = @-1;
     }
     
     location.locationDescription = descriptionText;
@@ -209,6 +223,21 @@
     location.longitude = [NSNumber numberWithDouble:self.coordinate.longitude];
     location.date = date;
     location.placemark = self.placemark;
+    
+    if (image != nil)
+    {
+        if (![location hasPhoto])
+        {
+            location.photoId = [NSNumber numberWithInt:[self nextPhotoId]];
+        }
+        
+        NSData *data = UIImagePNGRepresentation(image);
+        NSError *error;
+        if (![data writeToFile:[location photoPath] options:NSDataWritingAtomic error:&error])
+        {
+            NSLog(@"Error writing file: %@", error);
+        }
+    }
     
     NSError *error;
     if (![self.managedObjectContext save:&error])
@@ -220,6 +249,14 @@
     
     
     [self performSelector:@selector(closeScreen) withObject:nil afterDelay:0.6];
+}
+
+- (int)nextPhotoId
+{
+    int photoId = [[NSUserDefaults standardUserDefaults] integerForKey:@"PhotoID"];
+    [[NSUserDefaults standardUserDefaults] setInteger:photoId+1 forKey:@"PhotoID"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    return photoId;
 }
 
 - (IBAction)cancel:(id)sender
