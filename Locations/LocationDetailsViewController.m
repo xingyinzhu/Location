@@ -19,10 +19,16 @@
     NSString *descriptionText;
     NSString *categoryName;
     NSDate *date;
+    UIImage *image;
+    UIActionSheet *actionSheet;
+    UIImagePickerController *imagePicker;
 }
 
 @synthesize managedObjectContext;
 @synthesize locationToEdit;
+
+@synthesize imageView;
+@synthesize photoLabel;
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -31,8 +37,37 @@
         descriptionText = @"";
         categoryName = @"No Category";
         date = [NSDate date];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+            selector:@selector(applicationDidEnterBackground)
+            name:UIApplicationDidEnterBackgroundNotification
+            object:nil];
+    
     }
     return self;
+}
+
+- (void)applicationDidEnterBackground
+{
+    if (imagePicker != nil)
+    {
+        [self.navigationController dismissViewControllerAnimated:NO completion:nil];
+        imagePicker = nil;
+    }
+    
+    if (actionSheet != nil)
+    {
+        [actionSheet dismissWithClickedButtonIndex:actionSheet.cancelButtonIndex animated:NO];
+        actionSheet = nil;
+    }
+    
+    [self.descriptionTextView resignFirstResponder];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+            name:UIApplicationDidEnterBackgroundNotification object:nil];
 }
 
 -  (NSString *)stringFromPlacemark:(CLPlacemark *)thePlacemark
@@ -82,6 +117,11 @@
                                                                                                action:@selector(done:)];
     }
     
+    if (image != nil)
+    {
+        [self showImage:image];
+    }
+
     self.descriptionTextView.text = descriptionText;
     self.categoryLabel.text = categoryName;
     
@@ -123,7 +163,22 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    if ([self isViewLoaded] && self.view.window == nil)
+    {
+        self.view = nil;
+    }
+    
+    if (![self isViewLoaded]) {
+        self.descriptionTextView = nil;
+        self.categoryLabel = nil;
+        self.latitudeLabel = nil;
+        self.longitudeLabel = nil;
+        self.addressLabel = nil;
+        self.dateLabel = nil;
+        self.imageView = nil;
+        self.photoLabel = nil;
+    }
 }
 
 
@@ -182,10 +237,67 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
     if (indexPath.section == 0 && indexPath.row == 0)
     {
         [self.descriptionTextView becomeFirstResponder];
     }
+    else if (indexPath.section == 1 && indexPath.row == 0)
+    {
+        [self showPhotoMenu];
+    }
+}
+
+- (void)takePhoto
+{
+    imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.delegate = self;
+    imagePicker.allowsEditing = YES;
+    [self.navigationController presentViewController:imagePicker animated:YES completion:nil];
+}
+
+- (void)choosePhotoFromLibrary
+{
+    imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePicker.delegate = self;
+    imagePicker.allowsEditing = YES;
+    [self.navigationController presentViewController:imagePicker animated:YES completion:nil];
+}
+
+- (void)showPhotoMenu
+{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    //if (YES)
+    {
+        actionSheet = [[UIActionSheet alloc]
+                                      initWithTitle:nil
+                                      delegate:self
+                                      cancelButtonTitle:@"Cancel"
+                                      destructiveButtonTitle:nil
+                                      otherButtonTitles:@"Take Photo", @"Choose From Library", nil];
+        [actionSheet showInView:self.view];
+        
+    }
+    else
+    {
+        [self choosePhotoFromLibrary];
+    }
+}
+
+#pragma mark - UIActionSheetDelegate
+- (void)actionSheet:(UIActionSheet *)theActionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        [self takePhoto];
+    }
+    else if (buttonIndex == 1)
+    {
+        [self choosePhotoFromLibrary];
+    }
+    actionSheet = nil;
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -200,6 +312,34 @@
     }
 }
 
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    image = [info objectForKey:UIImagePickerControllerEditedImage];
+    
+    if ([self isViewLoaded])
+    {
+        [self showImage:image];
+        [self.tableView reloadData];
+    }
+    
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    imagePicker = nil;
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    imagePicker = nil;
+}
+
+- (void)showImage:(UIImage *)theImage
+{
+    self.imageView.image = theImage;
+    self.imageView.hidden = NO;
+    self.imageView.frame = CGRectMake(10, 10, 260, 260);
+    self.photoLabel.hidden = YES;
+}
 
 
 #pragma mark - UITableViewDelegate
@@ -209,6 +349,17 @@
     if (indexPath.section == 0 && indexPath.row == 0)
     {
         return 88;
+    }
+    else if (indexPath.section == 1)
+    {
+        if (self.imageView.hidden)
+        {
+            return 44;
+        }
+        else
+        {
+            return 280;
+        }
     }
     else if (indexPath.section == 2 && indexPath.row == 2)
     {

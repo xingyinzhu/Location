@@ -11,7 +11,11 @@
 
 @class Location;
 
-@interface LocationDetailsViewController : UITableViewController<UITextViewDelegate, CategoryPickerViewControllerDelegate>
+@interface LocationDetailsViewController : UITableViewController<UITextViewDelegate,
+                                                                CategoryPickerViewControllerDelegate,
+                                                                UIImagePickerControllerDelegate,
+                                                                UINavigationControllerDelegate,
+                                                                UIActionSheetDelegate>
 
 
 @property (nonatomic, strong) IBOutlet UITextView *descriptionTextView;
@@ -30,5 +34,9 @@
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @property (nonatomic, strong) Location *locationToEdit;
+
+
+@property (nonatomic, strong) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) IBOutlet UILabel *photoLabel;
 
 @end
