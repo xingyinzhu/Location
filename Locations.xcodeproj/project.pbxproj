@@ -18,11 +18,6 @@
 		BE03B1C9166C74C400124A29 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE03B1C8166C74C400124A29 /* Default-568h@2x.png */; };
 		BE03B1CC166C74C400124A29 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE03B1CA166C74C400124A29 /* MainStoryboard.storyboard */; };
 		BE03B1CF166C74C400124A29 /* CurrentLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03B1CE166C74C400124A29 /* CurrentLocationViewController.m */; };
-		BE03B1D1166C74C400124A29 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = BE03B1D0166C74C400124A29 /* first.png */; };
-		BE03B1D3166C74C400124A29 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE03B1D2166C74C400124A29 /* first@2x.png */; };
-		BE03B1D6166C74C400124A29 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03B1D5166C74C400124A29 /* SecondViewController.m */; };
-		BE03B1D8166C74C400124A29 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = BE03B1D7166C74C400124A29 /* second.png */; };
-		BE03B1DA166C74C400124A29 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE03B1D9166C74C400124A29 /* second@2x.png */; };
 		BE03B1E1166C838F00124A29 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE03B1E0166C838F00124A29 /* CoreLocation.framework */; };
 		BE03B1E8166CBF0700124A29 /* LocationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03B1E7166CBF0700124A29 /* LocationDetailsViewController.m */; };
 		BE03B1EF166CD71900124A29 /* CategoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03B1EE166CD71900124A29 /* CategoryPickerViewController.m */; };
@@ -79,6 +74,9 @@
 		BE2017BF166F2112002FF32A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2017BE166F2112002FF32A /* MapKit.framework */; };
 		BE2017C3166F21D5002FF32A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2017C2166F21D5002FF32A /* MapViewController.m */; };
 		BE2017E2166F8099002FF32A /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2017E1166F8099002FF32A /* UIImage+Resize.m */; };
+		BE25B0001670C1D1005F7A2A /* NSMutableString+AddText.m in Sources */ = {isa = PBXBuildFile; fileRef = BE25AFFF1670C1D1005F7A2A /* NSMutableString+AddText.m */; };
+		BE25B0071670DF3B005F7A2A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE25B0061670DF3B005F7A2A /* AudioToolbox.framework */; };
+		BE25B0091670E3F4005F7A2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE25B0081670E3F4005F7A2A /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,12 +96,6 @@
 		BE03B1CB166C74C400124A29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BE03B1CD166C74C400124A29 /* CurrentLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentLocationViewController.h; sourceTree = "<group>"; };
 		BE03B1CE166C74C400124A29 /* CurrentLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationViewController.m; sourceTree = "<group>"; };
-		BE03B1D0166C74C400124A29 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		BE03B1D2166C74C400124A29 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		BE03B1D4166C74C400124A29 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		BE03B1D5166C74C400124A29 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		BE03B1D7166C74C400124A29 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		BE03B1D9166C74C400124A29 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		BE03B1E0166C838F00124A29 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BE03B1E6166CBF0700124A29 /* LocationDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDetailsViewController.h; sourceTree = "<group>"; };
 		BE03B1E7166CBF0700124A29 /* LocationDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailsViewController.m; sourceTree = "<group>"; };
@@ -168,6 +160,10 @@
 		BE2017C2166F21D5002FF32A /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		BE2017E0166F8099002FF32A /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		BE2017E1166F8099002FF32A /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		BE25AFFE1670C1D1005F7A2A /* NSMutableString+AddText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+AddText.h"; sourceTree = "<group>"; };
+		BE25AFFF1670C1D1005F7A2A /* NSMutableString+AddText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+AddText.m"; sourceTree = "<group>"; };
+		BE25B0061670DF3B005F7A2A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BE25B0081670E3F4005F7A2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +171,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE25B0091670E3F4005F7A2A /* QuartzCore.framework in Frameworks */,
+				BE25B0071670DF3B005F7A2A /* AudioToolbox.framework in Frameworks */,
 				BE2017BF166F2112002FF32A /* MapKit.framework in Frameworks */,
 				BE12ED8F166DD7460054852A /* CoreData.framework in Frameworks */,
 				BE03B1E1166C838F00124A29 /* CoreLocation.framework in Frameworks */,
@@ -208,6 +206,8 @@
 		BE03B1B1166C74C300124A29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE25B0081670E3F4005F7A2A /* QuartzCore.framework */,
+				BE25B0061670DF3B005F7A2A /* AudioToolbox.framework */,
 				BE2017BE166F2112002FF32A /* MapKit.framework */,
 				BE12ED8E166DD7460054852A /* CoreData.framework */,
 				BE03B1E0166C838F00124A29 /* CoreLocation.framework */,
@@ -235,16 +235,12 @@
 				BE12ED9F166E23D90054852A /* LocationsViewController.m */,
 				BE03B1CD166C74C400124A29 /* CurrentLocationViewController.h */,
 				BE03B1CE166C74C400124A29 /* CurrentLocationViewController.m */,
+				BE25AFFE1670C1D1005F7A2A /* NSMutableString+AddText.h */,
+				BE25AFFF1670C1D1005F7A2A /* NSMutableString+AddText.m */,
 				BE03B1E6166CBF0700124A29 /* LocationDetailsViewController.h */,
 				BE03B1E7166CBF0700124A29 /* LocationDetailsViewController.m */,
 				BE03B1F0166CE1BA00124A29 /* HudView.h */,
 				BE03B1F1166CE1BA00124A29 /* HudView.m */,
-				BE03B1D0166C74C400124A29 /* first.png */,
-				BE03B1D2166C74C400124A29 /* first@2x.png */,
-				BE03B1D4166C74C400124A29 /* SecondViewController.h */,
-				BE03B1D5166C74C400124A29 /* SecondViewController.m */,
-				BE03B1D7166C74C400124A29 /* second.png */,
-				BE03B1D9166C74C400124A29 /* second@2x.png */,
 				BE03B1ED166CD71900124A29 /* CategoryPickerViewController.h */,
 				BE03B1EE166CD71900124A29 /* CategoryPickerViewController.m */,
 				BE2017C1166F21D5002FF32A /* MapViewController.h */,
@@ -423,10 +419,6 @@
 				BE03B1C7166C74C400124A29 /* Default@2x.png in Resources */,
 				BE03B1C9166C74C400124A29 /* Default-568h@2x.png in Resources */,
 				BE03B1CC166C74C400124A29 /* MainStoryboard.storyboard in Resources */,
-				BE03B1D1166C74C400124A29 /* first.png in Resources */,
-				BE03B1D3166C74C400124A29 /* first@2x.png in Resources */,
-				BE03B1D8166C74C400124A29 /* second.png in Resources */,
-				BE03B1DA166C74C400124A29 /* second@2x.png in Resources */,
 				BE03B226166CE37B00124A29 /* Checkmark.png in Resources */,
 				BE03B227166CE37B00124A29 /* Checkmark@2x.png in Resources */,
 				BE03B228166CE37B00124A29 /* Icon-72.png in Resources */,
@@ -484,7 +476,6 @@
 				BE03B1BF166C74C300124A29 /* main.m in Sources */,
 				BE03B1C3166C74C400124A29 /* AppDelegate.m in Sources */,
 				BE03B1CF166C74C400124A29 /* CurrentLocationViewController.m in Sources */,
-				BE03B1D6166C74C400124A29 /* SecondViewController.m in Sources */,
 				BE03B1E8166CBF0700124A29 /* LocationDetailsViewController.m in Sources */,
 				BE03B1EF166CD71900124A29 /* CategoryPickerViewController.m in Sources */,
 				BE03B1F2166CE1BA00124A29 /* HudView.m in Sources */,
@@ -494,6 +485,7 @@
 				BE12EDB3166E29BA0054852A /* LocationCell.m in Sources */,
 				BE2017C3166F21D5002FF32A /* MapViewController.m in Sources */,
 				BE2017E2166F8099002FF32A /* UIImage+Resize.m in Sources */,
+				BE25B0001670C1D1005F7A2A /* NSMutableString+AddText.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

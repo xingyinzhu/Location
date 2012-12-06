@@ -23,4 +23,9 @@
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
+
+@property (nonatomic, strong) IBOutlet UILabel *latitudeTextLabel;
+@property (nonatomic, strong) IBOutlet UILabel *longitudeTextLabel;
+@property (nonatomic, strong) IBOutlet UIView *panelView;
+
 @end

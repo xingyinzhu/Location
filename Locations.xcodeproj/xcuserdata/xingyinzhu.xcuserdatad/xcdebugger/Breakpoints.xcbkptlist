@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Locations/LocationDetailsViewController.m"
-         timestampString = "376405652.39692"
+         timestampString = "376489095.676928"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "382"
-         endingLineNumber = "382"
+         startingLineNumber = "387"
+         endingLineNumber = "387"
          landmarkName = "@implementation LocationDetailsViewController"
          landmarkType = "3">
       </FileBreakpoint>
@@ -60,13 +60,26 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Locations/CurrentLocationViewController.h"
-         timestampString = "376405840.084303"
+         timestampString = "376494942.740148"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "26"
-         endingLineNumber = "26"
+         startingLineNumber = "31"
+         endingLineNumber = "31"
          landmarkName = "@interface CurrentLocationViewController"
          landmarkType = "2">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Locations/CurrentLocationViewController.h"
+         timestampString = "376493332.276132"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "19"
+         endingLineNumber = "19"
+         landmarkName = "tagButton"
+         landmarkType = "19">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
